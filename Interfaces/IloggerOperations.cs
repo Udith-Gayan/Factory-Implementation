@@ -2,7 +2,7 @@
 {
     public interface ILoggerOperations
     {
-        void Log(string message);
-        void Clear();
+        public Task LogAsync(string message);
+        public Task Clear();
     }
 }
