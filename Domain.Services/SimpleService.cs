@@ -3,7 +3,7 @@ using Factory_Implementation.Interfaces;
 
 namespace Factory_Implementation.Domain.Services
 {
-    public class SimpleService
+    public class SimpleService : ISimpleService
     {
         private readonly ILoggerOperations _logger;
         private readonly IConfiguration _configuration;

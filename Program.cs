@@ -1,5 +1,6 @@
 using Factory_Implementation.Common.Services;
 using Factory_Implementation.Domain.Helpers;
+using Factory_Implementation.Domain.Services;
 using Factory_Implementation.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<ILoggerServiceProvider, LoggerServiceProvider>();
 builder.Services.AddSingleton<IDataContext, DataContext>();
+builder.Services.AddScoped<ISimpleService, SimpleService>();
 
 var app = builder.Build();
 
